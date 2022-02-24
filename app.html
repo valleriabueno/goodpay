@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>App [GoodPay]</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+
+  <body class="trancaTela">
+    <nav class="navbar navbar-light bg-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/recuperar.html">
+          <img
+            src="./img/logoTexto.png"
+            width="140"
+            height="60"
+            class="img-default"
+            alt="Logo Letras GoodPay"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header">
+            <img
+              src="./img/GoodPay.png"
+              width="80"
+              height="80"
+              class="img-default"
+              alt="Logo do Menu"
+            />
+            <div>
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                GoodPay Menu
+              </h5>
+              <h6 id="emailBadge" class="bg-success badge mt-2"></h6>
+            </div>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                Search
+              </button>
+            </form>
+            <button
+              id="btnSair"
+              class="btn btn-outline-dark mt-2 ms-auto d-block"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-door-closed-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M12 1a1 1 0 0 1 1 1v13h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V2a1 1 0 0 1 1-1h8zm-2 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                />
+              </svg>
+              Sair
+            </button>
+            <div
+              class="accordion accordion-flush"
+              id="accordionFlushExample"
+              style="margin-top: 0.8rem"
+            >
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne"></h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <div class="input-group input-group-lg campoLogin">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          fill="currentColor"
+                          class="bi bi-door-open-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15H1.5zM11 2h.5a.5.5 0 0 1 .5.5V15h-1V2zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                    <div class="input-group input-group-lg campoLogin">
+                      <span class="input-group-text" id="inputGroup-sizing-lg">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="25"
+                          height="25"
+                          fill="currentColor"
+                          class="bi bi-key-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2zM2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+                          />
+                        </svg>
+                      </span>
+                      <input
+                        type="password"
+                        id="senha"
+                        class="form-control"
+                        aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg"
+                      />
+                    </div>
+                    <div class="d-grid gap-2 ms-4">
+                      <button
+                        id="btnEntrar"
+                        class="btn btn-outline-secondary"
+                        type="button"
+                      >
+                        Entre no App
+                      </button>
+                      <button
+                        id="btnNovoUsuario"
+                        class="btn btn-outline-secondary"
+                        type="button"
+                      >
+                        Novo Usuário
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    Regras de Uso do Aplicativo
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <h3>
+                      DevTeam <span class="badge bg-secondary">BCW 9</span>
+                    </h3>
+                    <p>
+                      Este aplicativo não tem conexão com o banco de dados, o
+                      desenvolvimento deste aplicativo tem como finalidade o
+                      aprendizado de aplicações e interface web. Assim o uso
+                      deste aplicativo deve ser pensado como um protótipo não
+                      funcional.
+                    </p>
+                    <p>
+                      A aplicação usa elementos de personalização em Bootstrap
+                      5, com Javascript local, os dados utilizados para e
+                      adicionados neste interface não são enviados a um serviço.
+                    </p>
+                    <p class="badge bg-success">BCW 9: (FullStack)</p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseThree"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseThree"
+                  >
+                    SoulCode Academy
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseThree"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingThree"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div class="accordion-body">
+                    <p>
+                      Tech For Good: 5 pilares que vão transformar o mundo:
+                      Educação, Diversidade, Saúde, Longevidade e
+                      Sustentabilidade
+                    </p>
+                    <p>
+                      Nossa missão é a formação e o emprego, aplicando os 5
+                      pilares do "Tech For Good". Ser uma escola inclusiva, que,
+                      através de nossa metodologia ágil, possa capacitar e
+                      educar em tecnologia, gerar oportunidades de emprego para
+                      todas as gerações, no início ou na ressignificação de
+                      carreira, com foco em diversidade e equidade. Numa
+                      profissão que fomente o bem-estar físico e mental,
+                      permitindo o equilíbrio entre a vida profissional e
+                      pessoal, através do trabalho remoto, com flexibilidade de
+                      horários, além de ser um negócio sustentável e
+                      responsável, socialmente.
+                    </p>
+                    <p class="badge bg-primary">Team SoulCode</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="myModalApp" class="modal" tabindex="-1" data-bs-backdrop="static">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 id="titleModalApp" class="modal-title"></h5>
+            <button
+              id="btnModalCloseApp"
+              type="button"
+              class="btn-close"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p id="bodyModalApp">Vamos organizar suas finanças!</p>
+          </div>
+          <div class="modal-footer">
+            <button
+              id="btnModalApp"
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Começar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <script type="module" src="./src/index.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </footer>
+</html>

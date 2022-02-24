@@ -1,0 +1,17 @@
+.campoLogin{
+    margin: 0.8rem;
+}
+.trancaTela{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+.centralizar-y {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#bodyRegistro {
+    height: 100%;
+    padding-top: 80px;
+}
